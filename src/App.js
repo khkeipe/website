@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App" style={{backgroundImage: `url(${sunset})` }}>
-        <Typography>Welcome</Typography>
+        <Typography variant="h1" color="white"> Korey Keipe</Typography>
     </div>
   );
 }
