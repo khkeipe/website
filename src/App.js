@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { Typography, createMuiTheme, ThemeProvider, Container } from '@material-ui/core';
 import sunset from './images/sunset.jpg';
 import './App.css';
 
@@ -39,7 +39,9 @@ function App() {
   return (
     <div className="App" style={{backgroundImage: `url(${sunset})` }}>
       <ThemeProvider theme={theme}>
-        <Typography varient="h1" color="primary"> Korey Keipe</Typography>
+        <Container>
+          <Typography varient="h1" color="primary"> Dream Catcher LLC</Typography>
+        </Container>
       </ThemeProvider>
     </div>
   );
