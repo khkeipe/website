@@ -1,49 +1,26 @@
 import React from 'react';
-import { Typography, createMuiTheme, ThemeProvider, Container } from '@material-ui/core';
-import sunset from './images/sunset.jpg';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { ThemeProvider} from '@material-ui/core';
+import { mainTheme } from './theme-creator';
 import './App.css';
+import LandingComponent from './Components/LandingComponent';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: '#7f848c',
-      main: '#5f6670',
-      dark: '#42474e',
-      contrastText: '#fff',
-    },
-    secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
-      contrastText: '#000',
-    },
-  },
-  typography: {
-    fontFamily: [
-      'brushland',
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-    fontSize: 36,
-  },
-});
+
 function App() {
   return (
-    <div className="App" style={{backgroundImage: `url(${sunset})` }}>
-      <ThemeProvider theme={theme}>
-        <Container>
-          <Typography varient="h1" color="primary"> Dream Catcher LLC</Typography>
-        </Container>
-      </ThemeProvider>
-    </div>
+	<>
+	<ThemeProvider theme={mainTheme}>
+		<Router>
+			<Redirect to="/home"/>
+
+			<Switch>		
+
+				<Route path="/home" render={() => <LandingComponent/> } />
+			</Switch>
+		</Router>
+    
+	</ThemeProvider>
+    </>
   );
 }
 
