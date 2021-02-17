@@ -10,10 +10,10 @@ const LandingComponent = () => {
 		<>
 			<div className="App" style={{backgroundImage: `url(${sunset})`, margin: 0, height:'100vh' }}>
 			<Container>
-				<Typography varient="h1" color="primary"> Dream Catcher LLC</Typography>
+				<Typography varient="h1" color="primary"> Korey Keipe</Typography>
 				
 				<ThemeProvider theme={subTheme}>
-					<Typography > Solutions </Typography>
+					<Typography > CREATE | ENTERTAIN | INSPIRE </Typography>
 				</ThemeProvider>
 			</Container>
 			
